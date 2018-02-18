@@ -5,6 +5,17 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
+require 'middleman/rack'
+run Middleman.server
+
+# activate :deploy do |deploy|
+#   deploy.build_before = true
+#   deploy.deploy_method = :git
+#   deploy.branch = 'master'
+#   deploy.remote = 'heroku'
+#   deploy.path = '.'
+# end
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
